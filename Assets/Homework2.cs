@@ -55,6 +55,10 @@ public class Homework2 : MonoBehaviour
     {
       Summ(9);
     }
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+      Start();
+    }
   }
   void Summ(int number)
   {
@@ -69,7 +73,7 @@ public class Homework2 : MonoBehaviour
     {
       Debug.Log("There is enough apples.");
       Debug.Log(count + " steps");
-      Start();
     }
   }
 }
+

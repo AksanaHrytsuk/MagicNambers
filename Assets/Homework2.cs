@@ -5,13 +5,15 @@ using UnityEngine;
 public class Homework2 : MonoBehaviour
 {
   // Start is called before the first frame update
-  int apples = 0;
-  int count = 0;
+  int apples;
+  int count;
   int final_apples = 50;
   void Start()
   {
     Debug.Log("Welcome to the game!");
     Debug.Log("Enter numbers from 1 to 9");
+    apples = 0;
+    count = 0;
   }
 
   // Update is called once per frame
@@ -67,6 +69,7 @@ public class Homework2 : MonoBehaviour
     {
       Debug.Log("There is enough apples.");
       Debug.Log(count + " steps");
+      Start();
     }
   }
 }

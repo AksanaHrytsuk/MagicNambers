@@ -62,18 +62,15 @@ public class Homework2 : MonoBehaviour
   }
   void Summ(int number)
   {
-    if (apples < final_apples)
-    {
-      apples = apples + number;
-      Debug.Log(number);
-      Debug.Log("I have: " + apples + " apples");
-      count++;
-    }
-    else
+    apples = aplles + number;
+    count++;
+    Debug.Log(number);
+    Debug.Log("I have: " + apples + " apples");
+    if (apples >= 50)
     {
       Debug.Log("There is enough apples.");
       Debug.Log(count + " steps");
+      Start();
     }
   }
 }
-

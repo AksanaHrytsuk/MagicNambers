@@ -21,45 +21,64 @@ public class Homework2 : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Alpha1))
     {
-      Summ(1);
+      EndGame(1);
     }
     if (Input.GetKeyDown(KeyCode.Alpha2))
     {
-      Summ(2);
+      EndGame(2);
     }
     if (Input.GetKeyDown(KeyCode.Alpha3))
     {
-      Summ(3);
+      EndGame(3);
     }
     if (Input.GetKeyDown(KeyCode.Alpha4))
     {
-      Summ(4);
+      EndGame(4);
     }
     if (Input.GetKeyDown(KeyCode.Alpha5))
     {
-      Summ(5);
+      EndGame(5);
     }
     if (Input.GetKeyDown(KeyCode.Alpha6))
     {
-      Summ(6);
+      EndGame(6);
     }
     if (Input.GetKeyDown(KeyCode.Alpha7))
     {
-      Summ(7);
+      EndGame(7);
     }
     if (Input.GetKeyDown(KeyCode.Alpha8))
     {
-      Summ(8);
+      EndGame(8);
     }
     if (Input.GetKeyDown(KeyCode.Alpha9))
     {
-      Summ(9);
+      EndGame(9);
     }
     if (Input.GetKeyDown(KeyCode.Space))
     {
       Start();
     }
   }
+
+  void PrintEnd()
+  {
+    Debug.Log("There is enough apples.");
+    Debug.Log(count + " steps");
+  }
+
+  void EndGame(int number)
+  {
+    if (apples < final_apples)
+    {
+      Summ(number);
+    }
+    else
+    {
+      PrintEnd();
+    }
+  }
+  
   void Summ(int number)
   {
     apples = apples + number;
@@ -68,9 +87,7 @@ public class Homework2 : MonoBehaviour
     Debug.Log("I have: " + apples + " apples");
     if (apples >= final_apples)
     {
-      Debug.Log("There is enough apples.");
-      Debug.Log(count + " steps");
-      Start();
+      PrintEnd();
     }
   }
 }

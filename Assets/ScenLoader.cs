@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class ScenLoader : MonoBehaviour
 {
-    public void LoadNextLevel()
+    public void LoadNextLevel(int LevelIndex)
 {
-        SceneManager.LoadScene("Game");
+        int activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(activeSceneIndex + 1);
 
 }
+
+    public void firstscene()
+    {
+    SceneManager.LoadScene(0);
+    }
 }
+

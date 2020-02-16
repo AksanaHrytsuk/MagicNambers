@@ -5,26 +5,32 @@ using UnityEngine.UI;
 using TMPro;
 public class MagicNambersUi : MonoBehaviour
 {
-    public int guess;
+  private const int V = 0;
+  public int guess;
     public int minNumber = 1;
     public int maxNumber = 1000;
     public Text textguess;
     public TextMeshProUGUI textCount;
+    int count = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
         guess = Random.Range(minNumber, maxNumber + 1);
-        guess = (minNumber + maxNumber) / 2;
         textguess.text = "Ваше число " + guess.ToString() + "?";
-        textCount.text = "Ololo";
+        textCount.text = ("Надеюсь, я угадал.");
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+     public void UpdateGuess()
+    {
+        Debug.Log("Ваше число: " + guess + "?");
+        count++;
     }
 }
 
